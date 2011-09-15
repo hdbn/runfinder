@@ -38,17 +38,24 @@ public:
 
 // class for counting runs
 class runFinder {
+  // this function does the actual work
   static unsigned int runsAux(const std::string & s,
-			      std::vector<std::vector<std::pair<unsigned int, unsigned int> > > & runs_by_bpos,
+			      std::vector<std::vector<std::pair<unsigned int, unsigned int> > > &
+			      runs_by_bpos,
 			      enum ALGFLAG algf = USE_LPF_ORIGINAL);  
  public:
   
   // count runs in string s.
+  // follows mostly the linear time algorithm by:
+  // R. Kolpakov and G. Kucherov,
+  // Finding Maximal Repetitions in a Word in Linear Time. FOCS 1999: 596-604
   static unsigned int countRuns(const std::string & s,
 				enum ALGFLAG algf = USE_LPF_ORIGINAL);
 
   // find all runs in string s.
-  // the result will be contained in runs.
+  // follows mostly the linear time algorithm by:
+  // R. Kolpakov and G. Kucherov,
+  // Finding Maximal Repetitions in a Word in Linear Time. FOCS 1999: 596-604
   static void findRuns(const std::string & s,
 		       std::vector<run> & runs,
 		       enum ALGFLAG algf = USE_LPF_ORIGINAL);  

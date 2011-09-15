@@ -48,15 +48,24 @@ void print_bvec_masked(BVEC v, BVEC mask);
 double timediff(struct timeval s, struct timeval e);
 
 // count the number of runs in the least significant len bits of bit vector v,
-// using prefix run method
+// using prefix run method as described in:
+// K. Hirashima, H. Bannai, W. Matsubara, A. Ishino and A. Shinohara,
+// "Bit-parallel algorithms for computing all the runs in a string",
+// Proc. Prague Stringology Conference 2009 (PSC 2009), 203-213, (August 2009).
 unsigned int count_runs_bits_prefix(BVEC v, int length);
 
 // count the number of runs in the least significant len bits of bit vector v,
 // using position run method
+// K. Hirashima, H. Bannai, W. Matsubara, A. Ishino and A. Shinohara,
+// "Bit-parallel algorithms for computing all the runs in a string",
+// Proc. Prague Stringology Conference 2009 (PSC 2009), 203-213, (August 2009).
 unsigned int count_runs_bits_position(BVEC v, unsigned int len);
 
 // count the number of runs in the least significant len bits of bit vector v,
 // using sieve method
+// K. Hirashima, H. Bannai, W. Matsubara, A. Ishino and A. Shinohara,
+// "Bit-parallel algorithms for computing all the runs in a string",
+// Proc. Prague Stringology Conference 2009 (PSC 2009), 203-213, (August 2009).
 unsigned int count_runs_bits_sieve(BVEC v, unsigned int len);
 
 #ifdef __cplusplus
