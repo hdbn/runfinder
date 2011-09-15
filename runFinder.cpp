@@ -72,9 +72,6 @@ unsigned int runFinder::runsAux(const string & s,
 
   count = 0;
 
-  // Count number of runs using LZ factorization.  
-  // A table oflz-factors grouped into lists by begin position is maintained.
-  // Each list should be sorted by end position.
   unsigned int tlen, ulen, tbp, prevubp, ubp;
 
   ////////////////////////////////////////////////////////////////////////////////
