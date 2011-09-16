@@ -3,11 +3,14 @@
 import os, sys, glob
 
 env = Environment(CC="gcc",CXX="g++",
-                  CCFLAGS="-fast -Wall", LINKFLAGS="-fast -Wall",
+                  CFLAGS="-fast -Wall",
+                  CXXFLAGS="-fast -Wall", LINKFLAGS="-fast -Wall",
                   CPPPATH = ["/opt/local/include"])
 
 envDebug = Environment(CC="gcc",CXX="g++",
-                       CCFLAGS="-g -Wall", LINKFLAGS="-g -Wall",
+                       CFLAGS="-g -Wall",
+                       CXXFLAGS="-g -Wall", 
+                       LINKFLAGS="-g -Wall",
                        CPPPATH = ["/opt/local/include"])
 
 # use to force 32 bit compile
