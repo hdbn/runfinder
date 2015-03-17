@@ -1,0 +1,1 @@
+programs for finding and counting runs (maximal repetitions) in a string
