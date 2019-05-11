@@ -188,7 +188,7 @@ unsigned int runFinder::runsAux(const string & s,
 	  }
 	}
 	for(j = lastj; j < llen; j++){           // push the small enough ones into the new list (smaller last) 
-	  endp = ubp + runs_by_bpos[beginp][j].first - prevfactorbp;
+	  endp = min(length - 1, ubp + runs_by_bpos[beginp][j].first - prevfactorbp);
 	  // cout << "new: [" << ubp+i << "," << endp << "]" << endl;
 	  runs_by_bpos[ubp + i].push_back(make_pair(endp, runs_by_bpos[beginp][j].second));
 	  count++;
